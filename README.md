@@ -1,4 +1,4 @@
-# 🚀 Kaido Kit FilamentPhp Starter Code
+# 🚀 Kaido Kit FilamentPHP Starter Code
 
 A powerful and opinionated FilamentPHP starter kit designed to accelerate your admin panel development. Kaido Kit provides a robust foundation with pre-configured plugins, configuration and best practices for building feature-rich admin interfaces.
 
