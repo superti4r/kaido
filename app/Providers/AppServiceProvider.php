@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\User;
 use Filament\Support\Facades\FilamentView;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\Event;
@@ -26,7 +27,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
-
+        Gate::define('viewApiDocs', function (User $user) {
+            return true;
+        });
         // Gate::policy()
         Event::listen(function (\SocialiteProviders\Manager\SocialiteWasCalled $event) {
             $event->extendSocialite('discord', \SocialiteProviders\Google\Provider::class);

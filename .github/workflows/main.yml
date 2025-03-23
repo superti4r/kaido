@@ -18,8 +18,7 @@ jobs:
             cd /var/www/kaido.dosenngoding.com/
             git pull
             composer install
-            php artisan migrate:fresh --seed
-            php artisan shield:generate --all
-            php artisan db:seed --class=ShieldSeeder
+            php artisan migrate:fresh --seed --force
+            php artisan shield:generate --all --panel=admin
             php artisan shield:super-admin --user=11
             php artisan filament:optimize
